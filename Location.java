@@ -48,7 +48,7 @@ public class Location implements Describable {
 	}
 
 	public void diconnectLocation(Location location) {
-		if (location == null || location == this || !adjacentLocations.contains(location)) {
+		if (location == null || location == this) {
 			return;
 		}
 		adjacentLocations.remove(location);
