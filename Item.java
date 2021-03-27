@@ -3,6 +3,10 @@ public class Item implements Describable {
 	private String name;
 	private String description;
 
+	public Item(String name) {
+		this(name, "");
+	}
+	
 	public Item(String name, String descripton) {
 		this.name = name;
 		this.description = descripton;

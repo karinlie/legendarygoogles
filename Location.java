@@ -8,6 +8,10 @@ public class Location implements Describable {
 	private ArrayList<Item> items = new ArrayList<>();
 	private ArrayList<Personality> personalities = new ArrayList<>();
 
+	public Location(String name) {
+		this(name, "");
+	}
+
 	public Location(String name, String description) {
 		this.name = name;
 		this.description = description;
