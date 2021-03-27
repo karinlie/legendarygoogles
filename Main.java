@@ -1,7 +1,3 @@
-import item.*;
-import location.*;
-import personality.*;
-import describable.*;
 
 class Main {
 	public static void main(String[] args) {

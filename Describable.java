@@ -1,4 +1,3 @@
-package describable;
 
 public interface Describable {
 

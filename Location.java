@@ -1,11 +1,6 @@
-package location;
 
 import java.util.ArrayList;
 import java.util.Collection;
-
-import describable.Describable;
-import item.Item;
-import personality.Personality;
 
 public class Location implements Describable {
 	private String name;

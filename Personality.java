@@ -1,9 +1,5 @@
-package personality;
-
 import java.util.ArrayList;
 import java.util.Collection;
-import describable.Describable;
-import item.Item;
 
 public class Personality implements Describable {
 	private String name;

@@ -1,6 +1,3 @@
-package item;
-
-import describable.Describable;
 
 public class Item implements Describable {
 	private String name;
