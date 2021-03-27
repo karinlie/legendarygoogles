@@ -7,6 +7,11 @@ public class Personality implements Describable {
 	private String dialogue;
 	private ArrayList<Item> items = new ArrayList<>();
 
+	public Personality(String name, String description) {
+		this.name = name;
+		this.description = description;
+	}
+
 	public String getName() {
 		return name;
 	}
