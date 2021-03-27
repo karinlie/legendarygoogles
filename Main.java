@@ -5,7 +5,7 @@ import describable.*;
 
 class Main {
 	public static void main(String[] args) {
-		Location playground = new Playground();
+		Location playground = new Location("Playground", "Filled with kids!");
 		System.out.println(Describable.describe(playground));
 
 		for (Personality personality : playground.getPersonalities()) {
