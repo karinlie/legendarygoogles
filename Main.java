@@ -8,5 +8,4 @@ class Main {
 		Describable playground = new Playground();
 		System.out.println(Describable.describe(playground));
 	}
-
 }

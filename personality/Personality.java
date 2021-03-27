@@ -8,4 +8,6 @@ public interface Personality extends Describable {
 
 	Collection<Item> getItems();
 
+	String getDialogue();
+
 }

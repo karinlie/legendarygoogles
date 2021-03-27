@@ -11,6 +11,7 @@ public class EasterBunny implements Personality {
 	private String name = "Easter Bunny";
 	private String description = "A cute bunny with a surprisingly large amount of eggs.";
 	private ArrayList<Item> items = new ArrayList<>(Arrays.asList(new Egg(), new ChocolateEgg()));
+	private String dialogue = "Hey! Would you like an egg?";
 
 	public String getName() {
 		return name;
@@ -22,5 +23,9 @@ public class EasterBunny implements Personality {
 
 	public Collection<Item> getItems() {
 		return items;
+	}
+
+	public String getDialogue() {
+		return dialogue;
 	}
 }
