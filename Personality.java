@@ -14,8 +14,13 @@ public class Personality implements Describable {
 	}
 
 	public Personality(String name, String description) {
+		this(name, description, "");
+	}
+
+	public Personality(String name, String description, String dialogue) {
 		this.name = name;
 		this.description = description;
+		this.dialogue = dialogue;
 	}
 
 	public String getName() {
