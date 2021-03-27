@@ -1,16 +1,18 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Personality implements Describable {
 	private String name;
 	private String description;
 	private String dialogue;
-	private ArrayList<Item> items = new ArrayList<>();
+	private Set<Item> items = new TreeSet<>();
 
 	public Personality(String name) {
 		this(name, "");
 	}
-	
+
 	public Personality(String name, String description) {
 		this.name = name;
 		this.description = description;

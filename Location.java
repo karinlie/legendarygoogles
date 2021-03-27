@@ -1,12 +1,14 @@
 
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Location implements Describable {
 	private String name;
 	private String description;
-	private ArrayList<Item> items = new ArrayList<>();
-	private ArrayList<Personality> personalities = new ArrayList<>();
+	private Set<Item> items = new TreeSet<>();
+	private Set<Personality> personalities = new TreeSet<>();
+	private Set<Location> adjacentLocations = new TreeSet<>();
 
 	public Location(String name) {
 		this(name, "");
@@ -33,4 +35,19 @@ public class Location implements Describable {
 		return personalities;
 	}
 	
+	public void addAdjacentLocation(Location location) {
+		if (location == null) {
+			return;
+		}
+		adjacentLocations.add(location);
+		location.addAdjacentLocation(this);
+	}
+
+	public void removeAdjacentLocation(Location location) {
+		if (location == null) {
+			return;
+		}
+		adjacentLocations.remove(location);
+		location.removeAdjacentLocation(this);
+	}
 }
