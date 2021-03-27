@@ -54,4 +54,32 @@ public class Location implements Describable {
 		adjacentLocations.remove(location);
 		location.diconnectLocation(this);
 	}
+
+	public void addItem(Item item) {
+		if (item == null) {
+			return;
+		}
+		items.add(item);
+	}
+
+	public void removeItem(Item item) {
+		if (item == null) {
+			return;
+		}
+		items.remove(item);
+	}
+
+	public void addPersonality(Personality personality) {
+		if (personality == null) {
+			return;
+		}
+		personalities.add(personality);
+	}
+
+	public void removePersonality(Personality personality) {
+		if (personality == null) {
+			return;
+		}
+		personalities.remove(personality);
+	}
 }
