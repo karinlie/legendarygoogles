@@ -1,7 +1,12 @@
+import item.*;
+import location.*;
+import personality.*;
+import describable.*;
 
 class Main {
 	public static void main(String[] args) {
-		System.out.println("Hello World!");
+		Describable playground = new Playground();
+		System.out.println(Describable.describe(playground));
 	}
-}
 
+}
