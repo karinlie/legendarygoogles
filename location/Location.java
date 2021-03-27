@@ -1,16 +1,15 @@
 package location;
 
 import java.util.Collection;
+
+import describable.Describable;
 import item.Item;
 import personality.Personality;
 
-public interface Location {
-	
-	String getName();
+public interface Location extends Describable {
 
-	String getDescription();
-	
 	Collection<Item> getItems();
 
 	Collection<Personality> getPersonalities();
+	
 }

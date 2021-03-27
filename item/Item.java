@@ -1,9 +1,7 @@
 package item;
 
-public interface Item {
-	
-	String getName();
+import describable.Describable;
 
-	String getDescription();
+public interface Item extends Describable {
 	
 }

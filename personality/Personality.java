@@ -1,9 +1,7 @@
 package personality;
 
-public interface Personality {
-	
-	String getName();
+import describable.Describable;
 
-	String getDescription();
+public interface Personality extends Describable {
 	
 }
