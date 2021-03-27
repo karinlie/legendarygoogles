@@ -1,6 +1,6 @@
-package character;
+package personality;
 
-public interface Character {
+public interface Personality {
 	
 	String getName();
 

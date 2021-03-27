@@ -2,6 +2,7 @@ package location;
 
 import java.util.Collection;
 import item.Item;
+import personality.Personality;
 
 public interface Location {
 	
@@ -10,4 +11,6 @@ public interface Location {
 	String getDescription();
 	
 	Collection<Item> getItems();
+
+	Collection<Personality> getPersonalities();
 }
