@@ -1,14 +1,14 @@
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class Location implements Describable {
 	private String name;
 	private String description;
-	private Set<Item> items = new TreeSet<>();
-	private Set<Personality> personalities = new TreeSet<>();
-	private Set<Location> adjacentLocations = new TreeSet<>();
+	private Set<Item> items = new HashSet<>();
+	private Set<Personality> personalities = new HashSet<>();
+	private Set<Location> adjacentLocations = new HashSet<>();
 
 	public Location(String name) {
 		this(name, "");
@@ -35,19 +35,23 @@ public class Location implements Describable {
 		return personalities;
 	}
 	
-	public void addAdjacentLocation(Location location) {
-		if (location == null) {
+	public Collection<Location> getAdjacentLocations() {
+		return (Collection<Location>) adjacentLocations;
+	}
+
+	public void connectLocation(Location location) {
+		if (location == null || location == this || adjacentLocations.contains(location)) {
 			return;
 		}
 		adjacentLocations.add(location);
-		location.addAdjacentLocation(this);
+		location.connectLocation(this);
 	}
 
-	public void removeAdjacentLocation(Location location) {
-		if (location == null) {
+	public void diconnectLocation(Location location) {
+		if (location == null || location == this || !adjacentLocations.contains(location)) {
 			return;
 		}
 		adjacentLocations.remove(location);
-		location.removeAdjacentLocation(this);
+		location.diconnectLocation(this);
 	}
 }

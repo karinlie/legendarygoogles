@@ -1,13 +1,13 @@
-import java.util.ArrayList;
+
 import java.util.Collection;
 import java.util.Set;
-import java.util.TreeSet;
+import java.util.HashSet;
 
 public class Personality implements Describable {
 	private String name;
 	private String description;
 	private String dialogue;
-	private Set<Item> items = new TreeSet<>();
+	private Set<Item> items = new HashSet<>();
 
 	public Personality(String name) {
 		this(name, "");
